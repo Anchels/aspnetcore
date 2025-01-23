@@ -446,7 +446,7 @@ internal abstract class CertificateManager
 
         try
         {
-            SaveCertificate(certificate);
+            using var _ = SaveCertificate(certificate);
         }
         catch (Exception e)
         {
